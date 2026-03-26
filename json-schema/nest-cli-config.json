@@ -1,0 +1,231 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.com/nestjs/json-schema/nest-cli-config.json",
+  "title": "NestJS CLI Configuration (nest-cli.json)",
+  "description": "JSON Schema for the nest-cli.json configuration file used by the NestJS CLI for project management, compilation, and monorepo/workspace settings.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "JSON Schema reference"
+    },
+    "collection": {
+      "type": "string",
+      "default": "@nestjs/schematics",
+      "description": "Schematics collection to use for generating components"
+    },
+    "sourceRoot": {
+      "type": "string",
+      "default": "src",
+      "description": "Root directory for source files"
+    },
+    "root": {
+      "type": "string",
+      "default": "",
+      "description": "Root directory of the project (monorepo)"
+    },
+    "entryFile": {
+      "type": "string",
+      "default": "main",
+      "description": "Entry file name (without extension)"
+    },
+    "monorepo": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this is a monorepo workspace"
+    },
+    "language": {
+      "type": "string",
+      "enum": ["ts", "js"],
+      "default": "ts",
+      "description": "Programming language"
+    },
+    "compilerOptions": {
+      "type": "object",
+      "description": "Compiler settings for nest build",
+      "properties": {
+        "tsConfigPath": {
+          "type": "string",
+          "default": "tsconfig.build.json",
+          "description": "Path to TypeScript configuration"
+        },
+        "webpack": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use webpack for compilation"
+        },
+        "webpackConfigPath": {
+          "type": "string",
+          "default": "webpack.config.js",
+          "description": "Path to webpack configuration"
+        },
+        "plugins": {
+          "type": "array",
+          "description": "NestJS CLI plugins (e.g., @nestjs/swagger)",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "Plugin package name"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Plugin package name"
+                  },
+                  "options": {
+                    "type": "object",
+                    "description": "Plugin-specific options",
+                    "properties": {
+                      "dtoFileNameSuffix": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "default": [".dto.ts", ".entity.ts"],
+                        "description": "DTO file name suffixes for Swagger plugin"
+                      },
+                      "controllerFileNameSuffix": {
+                        "type": "string",
+                        "default": ".controller.ts"
+                      },
+                      "classValidatorShim": {
+                        "type": "boolean",
+                        "default": true
+                      },
+                      "dtoKeyOfComment": {
+                        "type": "string",
+                        "default": "description"
+                      },
+                      "controllerKeyOfComment": {
+                        "type": "string",
+                        "default": "description"
+                      },
+                      "introspectComments": {
+                        "type": "boolean",
+                        "default": false
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "required": ["name"]
+              }
+            ]
+          }
+        },
+        "assets": {
+          "type": "array",
+          "description": "Non-TypeScript assets to distribute",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "Glob pattern for assets"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "include": {
+                    "type": "string",
+                    "description": "Glob pattern"
+                  },
+                  "exclude": {
+                    "type": "string",
+                    "description": "Exclusion glob pattern"
+                  },
+                  "outDir": {
+                    "type": "string",
+                    "description": "Output directory"
+                  },
+                  "watchAssets": {
+                    "type": "boolean",
+                    "default": false
+                  }
+                },
+                "required": ["include"]
+              }
+            ]
+          }
+        },
+        "watchAssets": {
+          "type": "boolean",
+          "default": false,
+          "description": "Watch non-TS assets in watch mode"
+        },
+        "deleteOutDir": {
+          "type": "boolean",
+          "default": false,
+          "description": "Delete output directory before build"
+        },
+        "builder": {
+          "type": "string",
+          "enum": ["tsc", "webpack", "swc"],
+          "default": "tsc",
+          "description": "Builder to use for compilation"
+        },
+        "typeCheck": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable type checking (when using SWC builder)"
+        }
+      }
+    },
+    "generateOptions": {
+      "type": "object",
+      "description": "Default options for nest generate command",
+      "properties": {
+        "spec": {
+          "type": "boolean",
+          "default": true,
+          "description": "Generate spec/test files"
+        },
+        "flat": {
+          "type": "boolean",
+          "default": false,
+          "description": "Generate without subdirectory"
+        },
+        "baseDir": {
+          "type": "string",
+          "description": "Base directory for generating"
+        }
+      }
+    },
+    "projects": {
+      "type": "object",
+      "description": "Projects in a monorepo workspace",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["application", "library"],
+            "description": "Project type"
+          },
+          "root": {
+            "type": "string",
+            "description": "Project root directory"
+          },
+          "entryFile": {
+            "type": "string",
+            "default": "main",
+            "description": "Entry file for the project"
+          },
+          "sourceRoot": {
+            "type": "string",
+            "description": "Source root for the project"
+          },
+          "compilerOptions": {
+            "type": "object",
+            "properties": {
+              "tsConfigPath": { "type": "string" },
+              "webpack": { "type": "boolean" }
+            }
+          }
+        },
+        "required": ["type", "root", "sourceRoot"]
+      }
+    }
+  },
+  "additionalProperties": true
+}

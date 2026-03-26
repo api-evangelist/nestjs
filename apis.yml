@@ -39,7 +39,9 @@ apis:
       - GraphQL
       - WebSockets
       - Frameworks
-    properties: []
+    properties:
+      - type: JSONSchema
+        url: json-schema/nest-cli-config.json
 common:
   - type: Website
     url: https://nestjs.com/
