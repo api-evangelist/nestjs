@@ -47,11 +47,11 @@ common:
     url: https://nestjs.com/
   - type: Documentation
     url: https://docs.nestjs.com/
-  - type: Getting Started
+  - type: GettingStarted
     url: https://docs.nestjs.com/first-steps
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/nestjs
-  - type: GitHub Repository
+  - type: GitHubRepository
     url: https://github.com/nestjs/nest
   - type: Blog
     url: https://trilon.io/blog
