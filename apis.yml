@@ -43,6 +43,8 @@ apis:
       - type: JSONSchema
         url: json-schema/nest-cli-config.json
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/nestjs
   - type: Website
     url: https://nestjs.com/
   - type: Documentation
