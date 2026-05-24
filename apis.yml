@@ -61,6 +61,8 @@ common:
     url: https://courses.nestjs.com/
   - type: Discord
     url: https://discord.gg/nestjs
+  - type: LLMsTxt
+    url: https://docs.nestjs.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
