@@ -2,13 +2,13 @@
   "repo": "nestjs",
   "feeds": [
     {
-      "source": "https://trilon.io/blog",
-      "feed_url": "",
+      "source": "https://github.com/nestjs/nest",
+      "feed_url": "https://github.com/nestjs/nest",
       "title": "",
       "saved": 0,
-      "error": "no_feed"
+      "method": "none"
     }
   ],
-  "fetched": "2026-05-17T20:48:52Z",
+  "fetched": "2026-06-01T23:35:02Z",
   "post_count": 0
 }
