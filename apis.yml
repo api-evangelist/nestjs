@@ -45,6 +45,8 @@ apis:
   - url: graphql/nestjs-graphql.md
     type: GraphQL
 common:
+- type: DomainSecurity
+  url: security/nestjs-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/nestjs
 - type: Website
