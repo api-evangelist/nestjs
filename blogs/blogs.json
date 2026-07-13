@@ -2,12 +2,6 @@
   "repo": "nestjs",
   "feeds": [
     {
-      "source": "https://trilon.io/blog",
-      "feed_url": "",
-      "saved": 0,
-      "method": "agent-scrape"
-    },
-    {
       "source": "https://github.com/nestjs/nest",
       "feed_url": "https://github.com/nestjs/nest",
       "title": "",
@@ -15,7 +9,7 @@
       "method": "none"
     }
   ],
-  "fetched": "2026-06-27T12:55:39Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "post_count": 0,
-  "agent_pulled": "2026-06-27"
+  "agent_pulled": "2026-07-04"
 }
