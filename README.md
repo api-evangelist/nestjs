@@ -1,4 +1,4 @@
-# NestJS (nestjs)
+# NestJS
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,62 +66,121 @@
 
 NestJS is a progressive Node.js framework for building efficient, reliable, and scalable server-side applications. Built with TypeScript and inspired by Angular, it provides an out-of-the-box application architecture with support for REST APIs, GraphQL, WebSockets, microservices, and CLI tooling, using decorators and dependency injection.
 
-**URL:** [Visit APIs.yml URL](https://raw.githubusercontent.com/api-evangelist/nestjs/refs/heads/main/apis.yml)
+**Areas:** Framework · GraphQL · Microservices · Node.js · REST · TypeScript · WebSocket
 
-## Scope
+## NestJS on APIs.io
 
-- **Type:** Index
+Everything profiled for NestJS is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/nestjs/](https://apis.io/providers/nestjs/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Frameworks
-- GraphQL
-- Microservices
-- Node.js
-- REST
-- TypeScript
-- WebSockets
+- [NestJS](https://apis.io/apis/nestjs/nestjs/) — NestJS is a progressive Node.js framework for building efficient, reliable, and scalable server-side applications. Built with TypeScript and inspired by…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-26
-- **Modified:** 2026-03-26
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### GraphQL (1)
 
-### NestJS
+GraphQL schemas.
 
-NestJS is a progressive Node.js framework for building efficient, reliable, and scalable server-side applications. Built with TypeScript and inspired by Angular, it provides an out-of-the-box application architecture with support for REST APIs, GraphQL, WebSockets, microservices, and CLI tooling, using decorators and dependency injection.
+- [NestJS GraphQL API](https://apis.io/graphqls/nestjs/nestjs-graphql/)
 
-**Human URL:** [https://nestjs.com/](https://nestjs.com/)
+#### JSON Schema (1)
 
-#### Tags
+The data models the API reads and writes.
 
-- Frameworks
-- GraphQL
-- Microservices
-- Node.js
-- REST
-- TypeScript
-- WebSockets
+- [NestJS CLI Configuration (nest-cli.json)](https://apis.io/schemas/nestjs/nest-cli-config/)
 
-#### Properties
+#### Governance rules (1)
 
-- [JSONSchema](json-schema/nest-cli-config.json)
+Spectral rulesets for the provider's contracts.
 
-## Common Properties
+- [NestJS — jsonschema rules](https://apis.io/rules/nestjs/nestjs-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Nestjs Domain Security](https://apis.io/security/nestjs/nestjs-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Nestjs Plans Pricing](https://apis.io/plans/nestjs/nestjs-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Nestjs Rate Limits](https://apis.io/rate-limits/nestjs/nestjs-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Nestjs Finops](https://apis.io/finops/nestjs/nestjs-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://nestjs.com/)
 - [Documentation](https://docs.nestjs.com/)
-- [Getting Started](https://docs.nestjs.com/first-steps)
-- [GitHub Organization](https://github.com/nestjs)
-- [GitHub Repository](https://github.com/nestjs/nest)
+- [Getting started](https://docs.nestjs.com/first-steps)
 - [Blog](https://trilon.io/blog)
-- [Courses](https://courses.nestjs.com/)
-- [Discord](https://discord.gg/nestjs)
+- [GitHub](https://github.com/nestjs)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 24.1** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 7.2 |
+| Contract governance | 9.8 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 7.9 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/nestjs/](https://apis.io/providers/nestjs/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for NestJS: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/nestjs/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
